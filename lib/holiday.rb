@@ -43,6 +43,7 @@ def all_supplies_in_holidays(holiday_supplies)
       holiday.to_s.split("_").collect do |value|
         value.capitalize
       binding.pry
+    end
       puts "  #{holiday.capitalize}: #{supplies.join(", ")}"
 
     end
