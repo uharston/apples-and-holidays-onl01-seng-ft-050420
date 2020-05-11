@@ -58,8 +58,8 @@ def all_supplies_in_holidays(holiday_supplies)
   holiday_supplies.each do |season, holidays|
     puts "#{season.capitalize}:"
     holidays.each do |holiday, supplies|
-      puts "  #{  holiday.to_s.split("_").collect {  |value|  puts value.capitalize  }: #{  supplies.join(", ")  }"
-
+      puts "  #{holiday.to_s.split("_").map {|i| i.capitalize}          }: #{  supplies.join(", ")  }"
+      puts "  #{holiday.to_s.split("_").map {|i| i.capitalize}.join(" ")}: #{item.join(", ")}"
     end
   end
 end
